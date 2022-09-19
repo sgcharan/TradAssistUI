@@ -1,0 +1,7 @@
+<ion-row>
+  <ion-col *ngFor="let btn of socialLoginButtons">
+    <ion-fab-button color="light" [disabled]="btn.disabled" (click)="trySocialLogin(btn.platform)">
+      <ion-icon name="logo-{{btn.platform}}"></ion-icon>
+    </ion-fab-button>
+  </ion-col>
+</ion-row>
