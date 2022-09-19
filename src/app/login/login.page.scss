@@ -1,26 +1,30 @@
+@import "~rfs/scss";
+
 ion-card{
     height: -webkit-fill-available;
   }
-  
+
   .greet-text{
-    font-size: 75px;
-    
+    @include font-size(5.5rem);
+
   }
-  
+
   .welcome-text{
-    font-size: 40px;
+    @include font-size(3rem);
+
     font-weight: 400;
   }
-  
+
   .signup-text{
-    font-size: 30px;
+    @include font-size(2.5rem);
+
     font-weight: 300;
   }
-  
+
   .social-login-text{
     font-size: large;
   }
-  
+
   .hr-text-home-page {
     line-height: 1em;
     position: relative;
@@ -46,11 +50,11 @@ ion-card{
       position: relative;
       display: inline-block;
       color: black;
-  
+
       padding: 0 .5em;
       line-height: 1.5em;
       color: #818078;
-  
+
       //background color for the text is handled in variables.scss for respective system theme
     }
   }

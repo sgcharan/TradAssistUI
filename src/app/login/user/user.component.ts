@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/abstract/auth.service';
 import { FirebaseError } from 'firebase/app';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -24,7 +25,7 @@ export class UserComponent implements OnInit {
   promptPasswordReset: boolean;
   userForm: FormGroup;
 
-  constructor(private authservice: AuthService, private fb: FormBuilder) {
+  constructor(private authservice: AuthService, private fb: FormBuilder, private router: Router) {
     this.userForm = this.fb.group({
       email: this.email,
       password: this.password
@@ -38,6 +39,7 @@ export class UserComponent implements OnInit {
     .then((cred: firebase.auth.UserCredential | void)=> {
       if(cred){
         console.log(JSON.stringify(cred));
+        this.router.navigate(['/landing']);
       }
     })
     .catch((err) => {
