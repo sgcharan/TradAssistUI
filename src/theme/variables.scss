@@ -74,6 +74,11 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  .greetingscol{
+    --ion-margin: 200px;
+    --ion-paddign: 20px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -145,6 +150,10 @@
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+
+  }
+  .caption{
+    --caption: #E8E3FD;
   }
 
   /*
@@ -237,14 +246,17 @@
   .hr-text-home-page {
     &:after {
       background-color: #121212;
-    }    
+    }
   }
 }
 
 @media (prefers-color-scheme: light) {
+  .caption{
+    --caption: #3b306a;
+  }
   .hr-text-home-page {
     &:after {
       background-color: #ffffff;
-    }    
+    }
   }
 }

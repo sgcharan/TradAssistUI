@@ -1,0 +1,32 @@
+@import "~rfs/scss";
+ion-content {
+  --background: none;
+  background-image: url("../../assets/images/background-landing-blur.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-color: transparent;
+
+}
+
+ion-card{
+  --background: #f7f0f3cd;
+}
+.greetings {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "DM Sans", sans-serif;
+  font-size: 52px;
+  letter-spacing: -2px;
+  line-height: 1;
+  color: var(--ion-text-color,#000000);
+}
+
+.caption{
+  opacity: 0.8;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "DM Sans", sans-serif;
+  color: var(--caption, #e8e3fd);
+  @include font-size(1rem);
+}

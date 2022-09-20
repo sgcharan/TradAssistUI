@@ -1,9 +1,34 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>landing</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="landing-content">
 
-<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-md="6" class="greetingscol ion-margin-top">
+        <ion-card >
+          <ion-card-content>
+            <ion-grid>
+              <ion-row >
+                <ion-col >
+                  <ion-text class="ion-text-center" >
+                    <h1 class="greetings" #greettxt>{{greet | async }}!</h1>
+                  </ion-text>
+                  <ion-text class="ion-text-center" >
+                    <p class="caption">Get traditioned! The right way!</p>
+                  </ion-text>
+                </ion-col>
+              </ion-row>
+              <ion-row class="ion-justify-content-center">
+                <ion-button size="default" class="ion-align-items-center">
+                  Login
+                  <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+                </ion-button>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
 
 </ion-content>
