@@ -12,7 +12,7 @@ import {firebaseConfig } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule,
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }),
             AngularFireModule.initializeApp(firebaseConfig),
             IonicModule.forRoot(),
             AppRoutingModule,

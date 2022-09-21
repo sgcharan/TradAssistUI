@@ -3,6 +3,7 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 import { timer, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { greets } from './landing.constants';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-landing',
@@ -14,7 +15,7 @@ export class LandingPage implements OnInit, AfterViewInit {
 
   greet: Observable<string>;
 
-  constructor(private animationservice: AnimationService) {
+  constructor(private animationservice: AnimationService,private titleService: Title, private metaService: Meta) {
     this.greet = timer(0,5000).pipe(map(v => greets[v % greets.length]));
    }
 
@@ -27,6 +28,8 @@ export class LandingPage implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    this.titleService.setTitle('Devdactic SSR');
+    this.metaService.updateTag({ name: 'description', content: 'The Devdactic SSR Page' });
   }
 
 }
