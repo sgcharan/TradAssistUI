@@ -1,17 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable @typescript-eslint/naming-convention */
-/* eslint-disable @typescript-eslint/dot-notation */
-/* eslint-disable prefer-arrow/prefer-arrow-functions */
-const domino = require('domino');
-const fs = require('fs');
-const path = require('path');
-
-// (global as any ).WebSocket = require('ws');
-// (global as any).XMLHttpRequest = require('xhr2');
-
-
-
-
 import 'zone.js/dist/zone-node';
 
 import {APP_BASE_HREF} from '@angular/common';
@@ -27,14 +13,6 @@ export function app(): express.Express {
   const server = express();
   const distFolder = join(process.cwd(), 'dist/app/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
-
-  const window = domino.createWindow(indexHtml);
-global['window'] = window;
-global['document'] = window.document;
-global['self'] =  window;
-global['IDBIndex'] = window.IDBIndex;
-global['document'] =  window.document;
-global['navigator'] =  window.navigator;
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/main/modules/express-engine)
   server.engine('html', ngExpressEngine({
