@@ -1,3 +1,11 @@
 <ion-app>
+  <ion-header class="header">
+    <ion-toolbar [ngClass]="isBg ? 'toolbar-bg': 'toolbar'">
+      <!-- <ion-thumbnail slot="start">
+        <ion-img src="../../assets/icon/favicon.png"></ion-img>
+      </ion-thumbnail> -->
+      <ion-title slot="start">TradAssist</ion-title>
+    </ion-toolbar>
+  </ion-header>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>

@@ -1,15 +1,9 @@
-<ion-header role="banner">
-  <ion-toolbar>
-    <ion-title>  <ion-icon class="app-icon" name="earth-outline"></ion-icon>&nbsp; TradAssist</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true" class="landing-content">
+<ion-content [scrollEvents]="true" (ionScroll)="scrollEvent($event)">
 
   <ion-grid>
     <ion-row class="ion-justify-content-center">
       <ion-col size-md="6" class="greetingscol ion-margin-top">
-        <ion-card >
+        <ion-card class="first-card">
           <ion-card-content>
             <ion-grid>
               <ion-row >
@@ -22,8 +16,8 @@
                   </ion-text>
                 </ion-col>
               </ion-row>
-              <ion-row class="ion-justify-content-center">
-                <ion-button size="default" class="ion-align-items-center" [routerLink]="'login'">
+              <ion-row class="login ion-justify-content-center">
+                <ion-button size="default" class="login ion-align-items-center" [routerLink]="'login'" (click)="login()">
                   Login
                   <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
                 </ion-button>
@@ -35,6 +29,38 @@
     </ion-row>
   </ion-grid>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text class="ion-text-center">
+          <h3>Features</h3>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
+  <ion-grid>
+    <ion-row *ngFor="let feats of features" class="ion-justify-content-center">
+      <ion-col size-md="6">
+        <ion-card class="feature-card">
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="2">
+                <ion-icon class="feature-icons"  name="{{feats.icon}}"></ion-icon>
+              </ion-col>
+              <ion-col>
+                <ion-row>
+                  <ion-card-title>{{feats.name}}</ion-card-title>
+                </ion-row>
+                <ion-row>
+                  <ion-text>{{feats.description }}</ion-text>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

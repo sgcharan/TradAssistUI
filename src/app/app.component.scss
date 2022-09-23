@@ -1,0 +1,28 @@
+
+.toolbar{
+  font-family: var(--font-family);
+  color: white;
+  --background: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  --border-width: 0 !important;
+}
+
+.toolbar-bg{
+  font-family: var(--font-family);
+  color: white;
+  --background: none;
+  background: linear-gradient(135deg, rgb(74, 13, 143) 0%, rgb(250, 42, 143) 100%);
+}
+
+.header-md::after{
+  content: none !important;
+}
+
+
+ion-thumbnail {
+  --size: 35px;
+  --border-radius: 14px;
+  margin-left: 10px;
+}

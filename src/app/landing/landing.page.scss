@@ -1,21 +1,16 @@
 @import "~rfs/scss";
-ion-content {
-  --background: none;
-  background-image: url("../../assets/images/background-landing-blur.avif");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-  background-color: transparent;
-
-}
 
 ion-card{
-  --background: #f7f0f3cd;
+  --background: var(--ion-card-background);
 }
+
+ion-card.first-card{
+  padding-top:30px;
+}
+
 .greetings {
   font-weight: 700;
   font-style: normal;
-  font-family: "DM Sans", sans-serif;
   font-size: 52px;
   letter-spacing: -2px;
   line-height: 1;
@@ -26,15 +21,29 @@ ion-card{
   opacity: 0.8;
   font-weight: 400;
   font-style: normal;
-  font-family: "DM Sans", sans-serif;
   color: var(--caption, #e8e3fd);
   @include font-size(1rem);
 }
 
-.app-icon{
-  vertical-align: middle;
+.login{
+  margin-top:30px;
 }
 
 ion-title{
 vertical-align: middle;
+}
+
+ion-button{
+  --background: rgba(250, 0, 118, 0.8) ;
+  //--background: #93e9be;
+}
+
+.feature-icons{
+  vertical-align: middle;
+  font-size: 35px;
+}
+
+.feature-card{
+  margin-bottom: 0px;
+  margin-top: 0px;
 }

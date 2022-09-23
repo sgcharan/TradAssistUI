@@ -1,8 +1,5 @@
 @import "~rfs/scss";
 
-ion-card{
-    height: -webkit-fill-available;
-  }
 
   .greet-text{
     @include font-size(5.5rem);
