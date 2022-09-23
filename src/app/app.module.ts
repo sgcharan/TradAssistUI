@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {AngularFireModule} from '@angular/fire/compat';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 import {firebaseConfig } from 'src/environments/environment';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +17,8 @@ import {firebaseConfig } from 'src/environments/environment';
             AngularFireModule.initializeApp(firebaseConfig),
             IonicModule.forRoot(),
             AppRoutingModule,
-            AngularFireAuthModule],
+            AngularFireAuthModule,
+            ScullyLibModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

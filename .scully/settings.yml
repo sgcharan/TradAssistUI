@@ -1,0 +1,11 @@
+identifier: l688ea437cg8a0q8
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: app
+homeFolder: C:\Users\sgcha\MyProjects\TradAssist\trad-assist-ui
+distFolder: ./dist/ionic/www
+outDir: C:\Users\sgcha\MyProjects\TradAssist\trad-assist-ui\www
+handle404: ''
+allowErrorCollect: false
