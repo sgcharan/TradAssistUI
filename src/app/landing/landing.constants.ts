@@ -10,17 +10,17 @@ export const features: Feature[] = [
   {
     icon: 'planet-outline',
     name: 'Knowledge Space',
-    description: 'Get access to your community space where your questions get answered with clarity'
+    description: 'Engage with your community space and get solutions with clarity'
   },
   {
     icon: 'library-outline',
     name: 'Authentic Resources',
-    description: 'Get access to authentic community knowledge base for self learning'
+    description: 'Access authentic community knowledge base for self learning'
   },
   {
     icon: 'people-outline',
     name: 'Create your community',
-    description: 'Get your family and friends on-borad through an invite-only approach'
+    description: 'Bring your family and friends on-borad through an invite-only approach'
   }
 ];
 

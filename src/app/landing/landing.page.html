@@ -1,7 +1,7 @@
-<ion-content [scrollEvents]="true" (ionScroll)="scrollEvent($event)">
+<ion-content #landingcontent [scrollEvents]="true" (ionScroll)="scrollEvent($event)" (ionScrollEnd)="scrollEnd($event)">
 
   <ion-grid>
-    <ion-row class="ion-justify-content-center">
+    <ion-row class="ion-justify-content-center greetrow">
       <ion-col size-md="6" class="greetingscol ion-margin-top">
         <ion-card class="first-card">
           <ion-card-content>
@@ -30,16 +30,21 @@
   </ion-grid>
 
   <ion-grid>
-    <ion-row>
+    <ion-row class="section-heading-row">
       <ion-col>
         <ion-text class="ion-text-center">
           <h3>Features</h3>
         </ion-text>
       </ion-col>
     </ion-row>
+    <ion-row class="border-row ion-justify-content-center">
+      <ion-col size="2">
+        <div class="bottomborder"></div>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 
-  <ion-grid>
+  <ion-grid  class="feature-content">
     <ion-row *ngFor="let feats of features" class="ion-justify-content-center">
       <ion-col size-md="6">
         <ion-card class="feature-card">

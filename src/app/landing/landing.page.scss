@@ -8,6 +8,10 @@ ion-card.first-card{
   padding-top:30px;
 }
 
+.greetrow{
+  height: calc(100vh - 100px);
+}
+
 .greetings {
   font-weight: 700;
   font-style: normal;
@@ -46,4 +50,17 @@ ion-button{
 .feature-card{
   margin-bottom: 0px;
   margin-top: 0px;
+}
+
+.feature-content{
+  background: rgba(221, 214, 214, 0.244);
+  height: calc(100% - 150px);
+}
+
+.bottomborder{
+  border-bottom: 5px solid rgb(255, 0, 102);
+}
+
+.section-heading-row{
+  height: 50px;
 }
